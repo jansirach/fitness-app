@@ -1,18 +1,46 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { WebView } from 'react-native-webview';
 
 const SaturdayScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
         <Icon name="arrow-left" size={20} color="#444" />
         <Text style={styles.backText}>Back</Text>
       </TouchableOpacity>
-      
+
       <Text style={styles.dayTitle}>Saturday</Text>
       <Text style={styles.workoutTitle}>HIIT + Core 🏋🏻</Text>
-      {/* You can add sets/reps/videos later */}
-    </View>
+
+      <View style={styles.workoutBlock}>
+        <Text style={styles.workoutItemTitle}>1. Jump Squats</Text>
+        <Text style={styles.workoutDetails}>3 sets × 20 seconds</Text>
+
+        <Text style={styles.workoutItemTitle}>2. Mountain Climbers</Text>
+        <Text style={styles.workoutDetails}>3 sets × 30 seconds</Text>
+
+        <Text style={styles.workoutItemTitle}>3. Russian Twists</Text>
+        <Text style={styles.workoutDetails}>3 sets × 20 reps</Text>
+
+        <Text style={styles.workoutItemTitle}>4. High Knees</Text>
+        <Text style={styles.workoutDetails}>3 sets × 30 seconds</Text>
+
+        <Text style={styles.workoutItemTitle}>5. Plank</Text>
+        <Text style={styles.workoutDetails}>3 sets × 45 seconds</Text>
+      </View>
+
+      <Text style={styles.videoTitle}>Workout Demo Video 🎥</Text>
+      <View style={styles.videoContainer}>
+        <WebView
+          style={{ flex: 1 }}
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+          source={{ uri: 'https://www.youtube.com/embed/ml6cT4AZdqI' }} // 20-min HIIT Core workout
+        />
+      </View>
+    </ScrollView>
   );
 };
 
@@ -21,7 +49,7 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 60,
     backgroundColor: '#fff',
-    flex: 1,
+    flexGrow: 1,
   },
   backButton: {
     flexDirection: 'row',
@@ -42,12 +70,42 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   workoutTitle: {
-    fontSize: 20, 
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#e85d04',
     marginBottom: 20,
     paddingTop: 20,
     textAlign: 'center',
+  },
+  workoutBlock: {
+    backgroundColor: '#f1f1f1',
+    padding: 16,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  workoutItemTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 4,
+  },
+  workoutDetails: {
+    fontSize: 14,
+    color: '#444',
+    marginBottom: 12,
+  },
+  videoTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 12,
+    textAlign: 'center',
+    color: '#000',
+  },
+  videoContainer: {
+    height: 200,
+    borderRadius: 10,
+    overflow: 'hidden',
+    marginBottom: 40,
   },
 });
 
