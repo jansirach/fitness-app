@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
-    backgroundColor: '#fefae0',
+    backgroundColor: '#fff',
     paddingBottom: 40
   },
   title: {
@@ -150,12 +150,12 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
     borderRadius: 8,
     paddingHorizontal: 15,
-    backgroundColor: '#e9edc9',
+    backgroundColor: '#f8f9fa',
     color: '#333',
     fontSize: 16,
   },
   button: {
-    backgroundColor: '#dda15e',
+    backgroundColor: '#000',
     padding: 15,
     borderRadius: 8,
     marginTop: 20,

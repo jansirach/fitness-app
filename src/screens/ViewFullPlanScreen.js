@@ -24,7 +24,7 @@ const ViewFullPlanScreen = ({ navigation }) => {
 
       {workoutPlan.map((item, index) => (
         <View key={index} style={styles.card}>
-          <Icon name={item.icon} size={24} color="#bc6c25" style={styles.icon} />
+          <Icon name={item.icon} size={24} color="#e85d04" style={styles.icon} />
           <View style={styles.textContainer}>
             <Text style={styles.day}>{item.day}</Text>
             <Text style={styles.workout}>{item.workout}</Text>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     paddingTop: 60,
-    backgroundColor: '#fefae0',
+    backgroundColor: '#fff',
   },
   backButton: {
     flexDirection: 'row',
@@ -55,18 +55,18 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#dda15e',
+    color: '#000',
     marginBottom: 20,
     textAlign: 'center',
   },
   card: {
-    backgroundColor: '#ccd5ae',
+    backgroundColor: '#000',
     padding: 16,
     borderRadius: 12,
     marginBottom: 16,
     flexDirection: 'row',
     alignItems: 'center',
-    shadowColor: '#e9edc9',
+    shadowColor: '#444',
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
@@ -81,11 +81,11 @@ const styles = StyleSheet.create({
   day: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#333',
+    color: '#fff',
   },
   workout: {
     fontSize: 14,
-    color: '#444',
+    color: '#fff',
     marginTop: 4,
   },
 });

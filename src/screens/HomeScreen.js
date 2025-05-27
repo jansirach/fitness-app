@@ -13,7 +13,7 @@ const HomeScreen = ({ navigation }) => {
     <ScrollView contentContainerStyle={styles.container}>
       {/* Profile Icon */}
       <View style={styles.iconContainer}>
-        <Icon name="user-circle" size={80} color="#bc6c25" />
+        <Icon name="user-circle" size={80} color="#000" />
       </View>
 
       <Text style={styles.greeting}>Welcome, {user?.name} 👋</Text>
@@ -44,9 +44,9 @@ const HomeScreen = ({ navigation }) => {
     height={220}
     yAxisLabel=""
     chartConfig={{
-      backgroundColor: '#ccd5ae',
-      backgroundGradientFrom: '#ccd5ae',
-      backgroundGradientTo: '#ccd5ae',
+      backgroundColor: '#fff',
+      backgroundGradientFrom: '#fff',
+      backgroundGradientTo: '#fff',
       decimalPlaces: 0,
       color: (opacity = 1) => `rgba(68, 68, 68, ${opacity})`,
       labelColor: () => '#444',
@@ -55,6 +55,7 @@ const HomeScreen = ({ navigation }) => {
     style={{
       marginTop: 8,
       borderRadius: 8,
+      marginLeft: -5,
     }}
   />
 </View>
@@ -82,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
           </TouchableOpacity>
 
         </View>
-        <Image source={require('../assets/images/plan.png')} style={styles.cardImage} />
+        <Image source={require('../assets/images/human.png')} style={styles.cardImage} />
       </View>
 
       <TouchableOpacity style={styles.logoutButton} onPress={logout}>
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     paddingTop: 60,
-    backgroundColor: '#fefae0',
+    backgroundColor: '#fff',
     flexGrow: 1,
   },
   iconContainer: {
@@ -107,12 +108,12 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#dda15e',
+    color: '#000',
     textAlign: 'center',
     marginBottom: 20,
   },
   card: {
-    backgroundColor: '#ccd5ae',
+    backgroundColor: '#000',
     padding: 16,
     borderRadius: 12,
     marginBottom: 20,
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
   },
   cardRowContainer: {
     flexDirection: 'row',
-    backgroundColor: '#ccd5ae',
+    backgroundColor: '#000',
     padding: 16,
     borderRadius: 12,
     marginBottom: 20,
@@ -138,12 +139,12 @@ const styles = StyleSheet.create({
   },
   workoutCard: {
     flexDirection: 'row',
-    backgroundColor: '#ccd5ae',
+    backgroundColor: '#000',
     padding: 16,
     borderRadius: 12,
     marginTop: 20,
     marginBottom: 20,
-    shadowColor: '#e9edc9',
+    shadowColor: '#444',
     shadowOpacity: 0.05,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
@@ -152,8 +153,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   cardImage: {
-    width: 80,
-    height: 80,
+    width: 100,
+    height: 100,
     resizeMode: 'contain',
     marginLeft: 20,
     paddingBottom: 10,
@@ -165,10 +166,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     marginBottom: 10,
+    color: '#fff',
   },
   cardText: {
     fontSize: 14,
-    color: '#444',
+    color: '#fff',
     marginBottom: 4,
   },
   statText: {
@@ -182,19 +184,19 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     flex: 1,
-    backgroundColor: '#dda15e',
+    backgroundColor: '#e85d04',
     padding: 14,
     borderRadius: 10,
     marginHorizontal: 5,
     alignItems: 'center',
   },
   actionText: {
-    color: '#fff',
+    color: '#000',
     fontWeight: 'bold',
   },
   viewPlanButton: {
     marginTop: 10,
-    backgroundColor: '#dda15e',
+    backgroundColor: '#e85d04',
     paddingVertical: 10,
     borderRadius: 8,
     alignItems: 'center',
@@ -207,7 +209,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     padding: 12,
     borderRadius: 10,
-    backgroundColor: '#000000',
+    backgroundColor: '#d00000',
     alignItems: 'center',
   },
   logoutText: {

@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#fefae0'
+    backgroundColor: '#fff'
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#bc6c25'
+    color: '#000'
   },
   subtitle: {
     fontSize: 18,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   button: {
-    backgroundColor: '#dda15e',
+    backgroundColor: '#000',
     padding: 15,
     borderRadius: 5,
     width: '100%',
