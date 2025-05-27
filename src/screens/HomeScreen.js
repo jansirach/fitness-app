@@ -30,41 +30,41 @@ const HomeScreen = ({ navigation }) => {
       </View>
 
       <View style={styles.card}>
-  <Text style={styles.cardTitle}>Today's Stats</Text>
-  <BarChart
-    data={{
-      labels: ['Workout', 'Calories', 'Steps'],
-      datasets: [
-        {
-          data: [2, 2.5, 2.5], // replace with real data later
-        },
-      ],
-    }}
-    width={Dimensions.get('window').width - 60}
-    height={220}
-    yAxisLabel=""
-    chartConfig={{
-      backgroundColor: '#fff',
-      backgroundGradientFrom: '#fff',
-      backgroundGradientTo: '#fff',
-      decimalPlaces: 0,
-      color: (opacity = 1) => `rgba(68, 68, 68, ${opacity})`,
-      labelColor: () => '#444',
-      barPercentage: 0.6,
-    }}
-    style={{
-      marginTop: 8,
-      borderRadius: 8,
-      marginLeft: -5,
-    }}
-  />
-</View>
+        <Text style={styles.cardTitle}>Today's Stats</Text>
+        <BarChart
+          data={{
+            labels: ['Workout', 'Calories', 'Steps'],
+            datasets: [
+              {
+                data: [2, 2.5, 2.5], // replace with real data later
+              },
+            ],
+          }}
+          width={Dimensions.get('window').width - 60}
+          height={220}
+          yAxisLabel=""
+          chartConfig={{
+            backgroundColor: '#fff',
+            backgroundGradientFrom: '#fff',
+            backgroundGradientTo: '#fff',
+            decimalPlaces: 0,
+            color: (opacity = 1) => `rgba(68, 68, 68, ${opacity})`,
+            labelColor: () => '#444',
+            barPercentage: 0.6,
+          }}
+          style={{
+            marginTop: 8,
+            borderRadius: 8,
+            marginLeft: -5,
+          }}
+        />
+      </View>
 
       <View style={styles.quickActions}>
-        <TouchableOpacity style={styles.actionButton}>
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('TrackWorkout')}>
           <Text style={styles.actionText}>Track Workout</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.actionButton}>
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('LogMeal')}>
           <Text style={styles.actionText}>Log Meal</Text>
         </TouchableOpacity>
       </View>
@@ -78,10 +78,9 @@ const HomeScreen = ({ navigation }) => {
           <TouchableOpacity
             style={styles.viewPlanButton}
             onPress={() => navigation.navigate('ViewFullPlan')}
-        >
-          <Text style={styles.viewPlanText}>View Full Plan</Text>
+          >
+            <Text style={styles.viewPlanText}>View Full Plan</Text>
           </TouchableOpacity>
-
         </View>
         <Image source={require('../assets/images/human.png')} style={styles.cardImage} />
       </View>
@@ -191,7 +190,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   actionText: {
-    color: '#000',
+    color: '#fff',
     fontWeight: 'bold',
   },
   viewPlanButton: {

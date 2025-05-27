@@ -23,14 +23,18 @@ const ViewFullPlanScreen = ({ navigation }) => {
       <Text style={styles.title}>Your Weekly Plan 🏋️</Text>
 
       {workoutPlan.map((item, index) => (
-        <View key={index} style={styles.card}>
-          <Icon name={item.icon} size={24} color="#e85d04" style={styles.icon} />
-          <View style={styles.textContainer}>
-            <Text style={styles.day}>{item.day}</Text>
-            <Text style={styles.workout}>{item.workout}</Text>
-          </View>
-        </View>
-      ))}
+  <TouchableOpacity
+    key={index}
+    style={styles.card}
+    onPress={() => navigation.navigate(item.day)}
+  >
+    <Icon name={item.icon} size={24} color="#e85d04" style={styles.icon} />
+    <View style={styles.textContainer}>
+      <Text style={styles.day}>{item.day}</Text>
+      <Text style={styles.workout}>{item.workout}</Text>
+    </View>
+  </TouchableOpacity>
+))}
     </ScrollView>
   );
 };

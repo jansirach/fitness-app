@@ -5,7 +5,16 @@ import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileSetupScreen from '../screens/ProfileSetupScreen';
 import ProfileCompleteScreen from '../screens/ProfileCompleteScreen';
+import TrackWorkoutScreen from '../screens/TrackWorkoutScreen';
+import LogMealScreen from '../screens/LogMealScreen';
 import ViewFullPlanScreen from '../screens/ViewFullPlanScreen';
+import MondayScreen from '../screens/weekly/MondayScreen';
+import TuesdayScreen from '../screens/weekly/TuesdayScreen'; 
+import WednesdayScreen from '../screens/weekly/WednesdayScreen';
+import ThursdayScreen from '../screens/weekly/ThursdayScreen';
+import FridayScreen from '../screens/weekly/FridayScreen';
+import SaturdayScreen from '../screens/weekly/SaturdayScreen';
+import SundayScreen from '../screens/weekly/SundayScreen';
 
 const Stack = createStackNavigator();
 
@@ -29,7 +38,18 @@ const AppNavigator = () => {
     screens = (
       <>
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="TrackWorkout" component={TrackWorkoutScreen} />
+        <Stack.Screen name="LogMeal" component={LogMealScreen} /> 
         <Stack.Screen name="ViewFullPlan" component={ViewFullPlanScreen} />
+
+                      {/* weekly screens */}
+        <Stack.Screen name="Monday" component={MondayScreen} />
+        <Stack.Screen name="Tuesday" component={TuesdayScreen} />
+        <Stack.Screen name="Wednesday" component={WednesdayScreen} />
+        <Stack.Screen name="Thursday" component={ThursdayScreen} />
+        <Stack.Screen name="Friday" component={FridayScreen} />
+        <Stack.Screen name="Saturday" component={SaturdayScreen} />
+        <Stack.Screen name="Sunday" component={SundayScreen} />
       </>
     );
   }
