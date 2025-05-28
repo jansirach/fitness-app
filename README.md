@@ -3,10 +3,15 @@
 ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37)
 
-A simple and basic mobile application for fitness workout planning with React Native and Expo.
+A simple mobile application for fitness workout planning with React Native and Expo.
+---
 
+Let me know if you'd like to include screenshots, features, or a roadmap section too!
 The purpose of this project is to help students in need.
 
+> ⭐ **If you found this project helpful, please consider leaving a star on the repo — it helps others find it too!**
+
+---
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -32,5 +37,8 @@ The purpose of this project is to help students in need.
    # or
    yarn start
 
-
+## 📄 License
+   This project is licensed under the [MIT License](./LICENSE).
+   
+   © 2025 Jan Sirach
 
